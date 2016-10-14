@@ -1,2 +1,2 @@
 # jsDBWrapper
-Tasks wrapper for databases, indexed and web storage.
+wrapper for web databases, indexed and web storage. Mostly generic and and easily be extended to other database
