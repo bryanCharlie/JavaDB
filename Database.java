@@ -6,12 +6,10 @@ import java.util.HashMap;
 /**
  * @author Bryan Charlie
  * 10/14/2016
- * A port of a javascript IndexedDB API interface written by myself 
+ * A port of a javascript IndexedDB API interface 
  * can be seen at https://github.com/g0rush/jsDBWrapper/blob/master/indexeddb.js
  * 
- * THIS CLASS IS A SINGLETON. DO NOT ATTEMPT TO INITIALIZE DIRECTLY!!!
- * 
- * Each method has a guard against mistaken initialization as can be seen
+ * THIS CLASS IS A SINGLETON!!!
  */
 
 public class Database {
