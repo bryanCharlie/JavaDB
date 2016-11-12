@@ -10,26 +10,26 @@ import java.util.HashMap;
  * THIS CLASS IS A SINGLETON!!!
  */
 
-public class Database {
+public class IndexedDB {
 	private boolean initialized = false;
 	private HashMap<String, ArrayList<Item>> localStorage;
 	private ArrayList<String> initializedObjectStores;
 	private static int idCounter = 0;
-	private static Database instance = null; //Singular instance of this database class.
+	private static IndexedDB instance = null; //Singular instance of this database class.
 
 	/*
 	 * singular private constructor to ensure a single existing db instance.
 	 * can only by invoked via getDatabaseInstance();
 	 */
-	private Database(){
+	private IndexedDB(){
 		localStorage = new HashMap<String, ArrayList<Item>>();
 		initializedObjectStores = new ArrayList<String>();
 		initialized = true;
 	}
 
-	public static Database getDatabaseInstance(){
+	public static IndexedDB getDatabaseInstance(){
 		if(instance == null){
-			instance = new Database();
+			instance = new IndexedDB();
 		}
 
 		return instance;
