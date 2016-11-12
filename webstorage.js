@@ -14,7 +14,7 @@ storageEngine = function() {
 				initialized = true;
 				successCallback(null);
 			} else {
-				errorCallback('storage_api_not_supported', 'The web storage api is not supported');
+				errorCallback('storage_API_not_supported', 'The web storage api is not supported');
 			}
 		},
 	    initObjectStore : function(type, successCallback, errorCallback) {
