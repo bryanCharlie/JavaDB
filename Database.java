@@ -1,5 +1,3 @@
-package cs370;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
