@@ -4,8 +4,8 @@ import java.util.HashMap;
 /**
  * @author Bryan Charlie
  * 10/14/2016
- * A port of a javascript IndexedDB API interface 
- * can be seen at https://github.com/g0rush/jsDBWrapper/blob/master/indexeddb.js
+ * A port of a javascript webstorage API interface 
+ * can be seen at https://github.com/g0rush/jsDBWrapper/blob/master/webstorage.js
  * 
  * THIS CLASS IS A SINGLETON!!!
  */
