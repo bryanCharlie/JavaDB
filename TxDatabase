@@ -2,28 +2,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.Semaphore;
 
-public class IndexedDB {
+public class TxDatabase {
 	private boolean initialized = false;
 	private HashMap<String, ArrayList<Item>> localStorage;
 	private ArrayList<String> initializedObjectStores;
 	private static int idCounter = 0;
-	private static IndexedDB instance = null; //Singular instance of this database class.
+	private static TxDatabase instance = null; //Singular instance of this database class.
 	private final static Semaphore mutex = new Semaphore(1);
 
 	/*
 	 * singular private constructor to ensure a single existing db instance.
 	 * can only by invoked via getDatabaseInstance();
 	 */
-	private IndexedDB(){
+	private TxDatabase(){
 		localStorage = new HashMap<String, ArrayList<Item>>();
 		initializedObjectStores = new ArrayList<String>();
 		initialized = true;
 	}
 
-	public static IndexedDB getDatabaseInstance() throws InterruptedException{
+	public static TxDatabase getDatabaseInstance() throws InterruptedException{
 		mutex.acquire();
 		if(instance == null){
-			instance = new IndexedDB();
+			instance = new TxDatabase();
 		}
 		mutex.release();
 
