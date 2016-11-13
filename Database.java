@@ -1,35 +1,26 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * @author Bryan Charlie
- * 10/14/2016
- * A port of a javascript webstorage API interface 
- * can be seen at https://github.com/g0rush/jsDBWrapper/blob/master/webstorage.js
- * 
- * THIS CLASS IS A SINGLETON!!!
- */
-
-public class IndexedDB {
+public class Database {
 	private boolean initialized = false;
 	private HashMap<String, ArrayList<Item>> localStorage;
 	private ArrayList<String> initializedObjectStores;
 	private static int idCounter = 0;
-	private static IndexedDB instance = null; //Singular instance of this database class.
+	private static Database instance = null; //Singular instance of this database class.
 
 	/*
 	 * singular private constructor to ensure a single existing db instance.
 	 * can only by invoked via getDatabaseInstance();
 	 */
-	private IndexedDB(){
+	private Database(){
 		localStorage = new HashMap<String, ArrayList<Item>>();
 		initializedObjectStores = new ArrayList<String>();
 		initialized = true;
 	}
 
-	public static IndexedDB getDatabaseInstance(){
+	public static Database getDatabaseInstance(){
 		if(instance == null){
-			instance = new IndexedDB();
+			instance = new Database();
 		}
 
 		return instance;
