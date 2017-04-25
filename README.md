@@ -1,8 +1,8 @@
-##ABOUT the JavaDB project
+##  ABOUT the JavaDB project
 
 A small database meant to mimic the functionality of the WebStorage API. Data is stored via key-value pairs and retreived via key.
 
-#How to use
+# How to use
 
 The Database is initialized via a call to getDatabaseInstance which in turn calls a private constructer in the singleton pattern. This ensures a single instance of localStorage exising at a time.
 
